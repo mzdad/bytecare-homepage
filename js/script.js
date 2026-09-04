@@ -83,8 +83,8 @@
     labelServiceArea: { en: "Address", da: "Adresse" },
     serviceAreaValue: { en: "Hasselager, 8361, Denmark — drop-off. House calls by appointment.", da: "Hasselager, 8361 — aflevering. Kørsel ud efter aftale." },
     privacyNote: {
-      en: "This form opens your own email app to send us your message directly — nothing is stored or transmitted through this website.",
-      da: "Denne formular åbner din egen e-mail-app, så du kan sende beskeden direkte til os — intet gemmes eller sendes via denne hjemmeside."
+      en: "Your message goes straight to our inbox. We use your details only to answer your enquiry — nothing else, and we never pass them on.",
+      da: "Din besked går direkte til vores indbakke. Vi bruger kun dine oplysninger til at besvare din henvendelse — intet andet, og vi giver dem aldrig videre."
     },
 
     formName: { en: "Name", da: "Navn" },
@@ -105,7 +105,9 @@
 
     errRequired: { en: "Please fill in your name and describe the issue.", da: "Udfyld venligst dit navn og beskriv problemet." },
     errEmail: { en: "Please enter a valid email address.", da: "Indtast venligst en gyldig e-mailadresse." },
-    statusOpeningMail: { en: "Opening your email app to send this message…", da: "Åbner din e-mail-app for at sende beskeden…" },
+    statusSending: { en: "Sending…", da: "Sender…" },
+    statusSent: { en: "Thanks! Your message is on its way — we'll get back to you soon.", da: "Tak! Din besked er sendt — vi vender tilbage hurtigst muligt." },
+    statusFailed: { en: "Couldn't send your message just now.", da: "Din besked kunne ikke sendes lige nu." },
     mailSubjectPrefix: { en: "Repair request from ", da: "Reparationsanmodning fra " },
     mailLabelName: { en: "Name", da: "Navn" },
     mailLabelEmail: { en: "Email", da: "E-mail" },
@@ -115,8 +117,8 @@
     themeToDark: { en: "Switch to dark mode", da: "Skift til mørk tilstand" },
 
     fallbackIntro: {
-      en: "Nothing happened? Your device may not have an email app set up. Copy your message and send it to us from wherever you read your email:",
-      da: "Skete der ingenting? Din enhed har måske ikke et e-mailprogram sat op. Kopiér din besked, og send den til os derfra, hvor du normalt læser e-mail:"
+      en: "Copy your message and email it to us directly instead — we'll get it either way:",
+      da: "Kopiér din besked, og send den til os direkte i stedet — så når den frem alligevel:"
     },
     copyButton: { en: "Copy message", da: "Kopiér besked" },
     copyDone: { en: "Copied!", da: "Kopieret!" },
@@ -246,6 +248,7 @@
   var fallbackMessage = document.getElementById("fallbackMessage");
   var copyBtn = document.getElementById("copyBtn");
   var CONTACT_EMAIL = "SonderbekIT@pm.me";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT_EMAIL;
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function setStatus(message, state) {
@@ -263,6 +266,9 @@
       var phone = form.phone.value.trim();
       var message = form.message.value.trim();
 
+      // Honeypot: real people never see this field, bots fill it in.
+      if (form._honey && form._honey.value) return;
+
       if (!name || !message) {
         setStatus(t("errRequired"), "error");
         return;
@@ -272,6 +278,7 @@
         return;
       }
 
+      var submitBtn = form.querySelector('button[type="submit"]');
       var bodyLines = [
         t("mailLabelName") + ": " + name,
         t("mailLabelEmail") + ": " + email,
@@ -280,19 +287,48 @@
         message
       ].filter(function (line) { return line !== null; });
 
-      var subject = encodeURIComponent(t("mailSubjectPrefix") + name);
-      var body = encodeURIComponent(bodyLines.join("\n"));
-      var mailto = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
-
-      // Always offer a copy/paste route too: plenty of visitors have no mail
-      // app registered, and for them the mailto: below does nothing at all.
-      if (fallbackMessage && fallback) {
-        fallbackMessage.textContent = bodyLines.join("\n");
-        fallback.hidden = false;
+      function failed() {
+        // Give them the message to copy, so a failed send is never a dead end.
+        if (fallbackMessage && fallback) {
+          fallbackMessage.textContent = bodyLines.join("\n");
+          fallback.hidden = false;
+        }
+        setStatus(t("statusFailed"), "error");
       }
 
-      setStatus(t("statusOpeningMail"), "success");
-      window.location.href = mailto;
+      if (submitBtn) submitBtn.disabled = true;
+      setStatus(t("statusSending"), "");
+
+      fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone || "—",
+          message: message,
+          _subject: t("mailSubjectPrefix") + name,
+          _replyto: email,
+          _template: "table",
+          _captcha: "false"
+        })
+      }).then(function (res) {
+        if (!res.ok) throw new Error("Bad response " + res.status);
+        return res.json();
+      }).then(function (data) {
+        // FormSubmit answers 200 even when it refuses to deliver (an
+        // unactivated form, say), reporting the real outcome as the string
+        // "true"/"false" in the body. Trusting the status code alone would
+        // tell people their message was sent when it never left.
+        if (!data || String(data.success) !== "true") {
+          throw new Error((data && data.message) || "Send rejected");
+        }
+        setStatus(t("statusSent"), "success");
+        form.reset();
+        if (fallback) fallback.hidden = true;
+      }).catch(failed).then(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
     });
   }
 

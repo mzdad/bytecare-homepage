@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; base-uri 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="pageTitle">Sonderbek IT — Home Computer Repair You Can Trust</title>
 <meta name="description" content="Sonderbek IT fixes hardware and software problems on your stationary home computer — fast, honest, and secure. Book a free diagnosis today." data-i18n-attr="content:metaDescription">
@@ -202,8 +202,8 @@
           </div>
         </dl>
         <p class="privacy-note" data-i18n="privacyNote">
-          This form opens your own email app to send us your message directly —
-          nothing is stored or transmitted through this website.
+          Your message goes straight to our inbox. We use your details only to
+          answer your enquiry — nothing else, and we never pass them on.
         </p>
       </div>
 
@@ -224,6 +224,7 @@
           <label for="message" data-i18n="formMessage">What's going on with your computer?</label>
           <textarea id="message" name="message" rows="5" maxlength="1000" required></textarea>
         </div>
+        <input type="text" name="_honey" id="honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         <button type="submit" class="btn btn-primary btn-lg" data-i18n="formSubmit">Send Message</button>
 
