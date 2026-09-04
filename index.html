@@ -226,6 +226,13 @@
         </div>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         <button type="submit" class="btn btn-primary btn-lg" data-i18n="formSubmit">Send Message</button>
+
+        <div class="form-fallback" id="formFallback" hidden>
+          <p data-i18n="fallbackIntro">Nothing happened? Your device may not have an email app set up. Copy your message and send it to us from wherever you read your email:</p>
+          <p class="fallback-address"><a href="mailto:SonderbekIT@pm.me">SonderbekIT@pm.me</a></p>
+          <pre class="fallback-message" id="fallbackMessage"></pre>
+          <button type="button" class="btn btn-ghost" id="copyBtn" data-i18n="copyButton">Copy message</button>
+        </div>
       </form>
     </div>
   </section>

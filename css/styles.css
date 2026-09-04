@@ -146,7 +146,10 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   font-size: 1.15rem;
   text-decoration: none;
   color: var(--text);
+  white-space: nowrap;
 }
+.logo-mark { flex-shrink: 0; }
+.nav-list a { white-space: nowrap; }
 .header-cta { flex-shrink: 0; min-width: 12rem; text-align: center; }
 
 .header-controls {
@@ -391,6 +394,33 @@ p { margin: 0 0 16px; color: var(--text-muted); }
 .form-status[data-state="error"] { color: var(--error); }
 .form-status[data-state="success"] { color: var(--success); }
 
+[hidden] { display: none !important; }
+.form-fallback {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.form-fallback p { font-size: .9rem; margin-bottom: 10px; }
+.fallback-address {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+.fallback-message {
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .8rem;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
@@ -415,7 +445,9 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   .steps { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 640px) {
+/* The header runs out of room well before the page does — especially in
+   Danish, where the nav labels are longer — so it collapses earlier. */
+@media (max-width: 900px) {
   .nav-toggle { display: inline-flex; }
   .nav-list {
     position: absolute;
@@ -431,6 +463,9 @@ p { margin: 0 0 16px; color: var(--text-muted); }
   }
   .nav-list.open { display: flex; }
   .header-cta { display: none; }
+}
+
+@media (max-width: 640px) {
   .card-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
 }

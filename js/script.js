@@ -112,7 +112,15 @@
     mailLabelPhone: { en: "Phone", da: "Telefon" },
 
     themeToLight: { en: "Switch to light mode", da: "Skift til lys tilstand" },
-    themeToDark: { en: "Switch to dark mode", da: "Skift til mørk tilstand" }
+    themeToDark: { en: "Switch to dark mode", da: "Skift til mørk tilstand" },
+
+    fallbackIntro: {
+      en: "Nothing happened? Your device may not have an email app set up. Copy your message and send it to us from wherever you read your email:",
+      da: "Skete der ingenting? Din enhed har måske ikke et e-mailprogram sat op. Kopiér din besked, og send den til os derfra, hvor du normalt læser e-mail:"
+    },
+    copyButton: { en: "Copy message", da: "Kopiér besked" },
+    copyDone: { en: "Copied!", da: "Kopieret!" },
+    copyFailed: { en: "Couldn't copy — please select the text above and copy it manually.", da: "Kunne ikke kopiere — markér teksten ovenfor, og kopiér den manuelt." }
   };
 
   var currentLang = "en";
@@ -234,6 +242,9 @@
   // Contact form -> opens the visitor's own email client, no data leaves the browser
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
+  var fallback = document.getElementById("formFallback");
+  var fallbackMessage = document.getElementById("fallbackMessage");
+  var copyBtn = document.getElementById("copyBtn");
   var CONTACT_EMAIL = "SonderbekIT@pm.me";
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -273,8 +284,36 @@
       var body = encodeURIComponent(bodyLines.join("\n"));
       var mailto = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
 
+      // Always offer a copy/paste route too: plenty of visitors have no mail
+      // app registered, and for them the mailto: below does nothing at all.
+      if (fallbackMessage && fallback) {
+        fallbackMessage.textContent = bodyLines.join("\n");
+        fallback.hidden = false;
+      }
+
       setStatus(t("statusOpeningMail"), "success");
       window.location.href = mailto;
+    });
+  }
+
+  if (copyBtn) {
+    copyBtn.addEventListener("click", function () {
+      var text = fallbackMessage ? fallbackMessage.textContent : "";
+      if (!text) return;
+
+      function done() {
+        copyBtn.textContent = t("copyDone");
+        setTimeout(function () { copyBtn.textContent = t("copyButton"); }, 2000);
+      }
+      function failed() {
+        setStatus(t("copyFailed"), "error");
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, failed);
+      } else {
+        failed();
+      }
     });
   }
 
