@@ -22,7 +22,6 @@
       da: "Sonderbek IT hjælper private med at løse hardware- og softwareproblemer på deres stationære computer. Aflever den hos os, eller vi kommer ud efter aftale. Ingen fagsprog, ingen skjulte gebyrer, og vi roder ikke i filer, der ikke er vores at se."
     },
     heroCtaPrimary: { en: "Get a Free Diagnosis", da: "Få en gratis diagnose" },
-    heroCtaCall: { en: "Call Now", da: "Ring nu" },
 
     trustPricing: { en: "Upfront pricing", da: "Fast pris på forhånd" },
     trustPrivacy: { en: "Privacy-first repairs", da: "Diskretion i højsædet" },
@@ -78,8 +77,6 @@
 
     contactTitle: { en: "Let's fix your computer", da: "Lad os ordne din computer" },
     contactSub: { en: "Send us a few details and we'll get back to you — usually within a day.", da: "Send os et par detaljer, så vender vi tilbage — som regel inden for en dag." },
-    labelPhone: { en: "Phone", da: "Telefon" },
-    labelEmail: { en: "Email", da: "E-mail" },
     labelServiceArea: { en: "Address", da: "Adresse" },
     serviceAreaValue: { en: "Hasselager, 8361, Denmark — drop-off. House calls by appointment.", da: "Hasselager, 8361 — aflevering. Kørsel ud efter aftale." },
     privacyNote: {
