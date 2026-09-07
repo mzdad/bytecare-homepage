@@ -298,7 +298,28 @@
     });
   }
 
+  // Which piece of content is the reader actually looking at? The first block
+  // still on screen. Used to hold their place across a language change: Danish
+  // and English are not the same length, so the text ABOVE what you are reading
+  // grows or shrinks and slides the whole page out from under you.
+  function readingAnchor() {
+    var y = window.scrollY || document.documentElement.scrollTop || 0;
+    // At the very top there is nothing to hold on to, and staying at the top
+    // is the right answer anyway.
+    if (y <= 0) return null;
+    var nodes = document.querySelectorAll(
+      "main h1, main h2, main h3, main p, main li, main tr, main article, main .card");
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].getBoundingClientRect().bottom > 0) return nodes[i];
+    }
+    return null;
+  }
+
   function applyLanguage(lang) {
+    // Note where the reader's eye is before any text is swapped.
+    var anchor = readingAnchor();
+    var anchorTop = anchor ? anchor.getBoundingClientRect().top : 0;
+
     currentLang = lang === "da" ? "da" : "en";
     document.documentElement.lang = currentLang;
 
@@ -326,6 +347,28 @@
     // The opening-hours badge is built from the clock rather than from a
     // dictionary key, so it has to be redrawn by hand after a language change.
     if (typeof renderOpeningState === "function") renderOpeningState();
+
+    // Put the reader back where they were. Everything above the anchor has just
+    // changed length, so the anchor has drifted up or down the screen; scroll by
+    // exactly that much and it lands under the same eyeline it started at.
+    // isConnected: if a swap ever replaces the anchor's container outright,
+    // measuring a detached node would scroll by a meaningless number.
+    if (anchor && anchor.isConnected !== false) {
+      var drift = anchor.getBoundingClientRect().top - anchorTop;
+      if (drift) {
+        // The site scrolls smoothly everywhere else, but an animated correction
+        // IS the movement this exists to remove - so it has to land instantly.
+        var root = document.documentElement;
+        root.classList.add("lang-switching");
+        window.scrollBy(0, drift);
+        if (window.requestAnimationFrame) {
+          requestAnimationFrame(function () { root.classList.remove("lang-switching"); });
+        } else {
+          root.classList.remove("lang-switching");
+        }
+      }
+    }
+
     try { localStorage.setItem(LANG_KEY, currentLang); } catch (e) {}
   }
 

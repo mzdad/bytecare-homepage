@@ -618,3 +618,8 @@ html[data-theme="dark"] .todo-inline { color: #e0a44c; }
   .info-main h2 { margin-top: 30px; }
   .price-hero-value { font-size: 1.8rem; }
 }
+
+/* While the language is being swapped the scroll correction must land in one
+   frame. The site scrolls smoothly everywhere else, but an animated correction
+   is exactly the movement the correction exists to remove. */
+html.lang-switching { scroll-behavior: auto; }
