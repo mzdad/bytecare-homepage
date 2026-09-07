@@ -9,6 +9,36 @@
     menuSr: { en: "Menu", da: "Menu" },
     logoAria: { en: "Sonderbek IT home", da: "Sonderbek IT forside" },
 
+    svc6Title: { en: "Remote support", da: "Fjernsupport" },
+    svc6Desc: {
+      en: "Plenty can be sorted out without the machine leaving your house. I connect to your screen while you watch.",
+      da: "Mange ting kan klares uden at maskinen forlader hjemmet. Jeg kobler mig p\u00e5 din sk\u00e6rm, mens du kigger med."
+    },
+    pricesRemoteLabel: { en: "Remote support", da: "Fjernsupport" },
+    pricesRemoteNote: { en: "per hour, incl. VAT", da: "pr. time, inkl. moms" },
+    pricesRemoteTitle: { en: "Remote support", da: "Fjernsupport" },
+    pricesRemoteBody: {
+      en: "A lot can be sorted out without the machine leaving your desk. I connect to your screen, <strong>you can see everything I do</strong>, and you can cut the connection at any moment. Same price as the workshop: 562 kr an hour.",
+      da: "Meget kan klares, uden at maskinen forlader dit bord. Jeg kobler mig p\u00e5 din sk\u00e6rm, <strong>du kan se alt hvad jeg laver</strong>, og du kan afbryde forbindelsen n\u00e5r som helst. Samme pris som p\u00e5 v\u00e6rkstedet: 562 kr i timen."
+    },
+    pricesRemoteGood: {
+      en: "<strong>Good for:</strong> mail and passwords playing up, Windows updates that fail, programs that will not start, printers and networks, tidying up and speed.",
+      da: "<strong>Godt til:</strong> mail og adgangskoder der driller, Windows-opdateringer der fejler, programmer der ikke vil starte, printer og netv\u00e6rk, oprydning og hastighed."
+    },
+    pricesRemoteBad: {
+      en: "<strong>Not for:</strong> anything needing a screwdriver \u2014 broken hardware, a new drive, dust and cooling. And the machine has to be able to get online; if it will not start, I need it in my hands.",
+      da: "<strong>Ikke til:</strong> alt der kr\u00e6ver en skruetr\u00e6kker \u2014 defekt hardware, ny disk, st\u00f8v og k\u00f8ling. Og maskinen skal kunne komme p\u00e5 nettet; kan den ikke starte, skal jeg have fingre i den."
+    },
+    pricesRemoteTrustTitle: { en: "I never ring you out of the blue.", da: "Jeg ringer aldrig uopfordret." },
+    pricesRemoteTrustBody: {
+      en: "If somebody calls saying they are from Microsoft or your bank and would like access to your computer, hang up. Remote support with me always starts with <em>you</em> writing to <em>me</em>.",
+      da: "F\u00e5r du et opkald fra en, der siger han er fra Microsoft eller din bank og gerne vil ind p\u00e5 din computer, s\u00e5 l\u00e6g p\u00e5. Fjernsupport hos mig starter altid med, at <em>du</em> har skrevet til <em>mig</em>."
+    },
+    areasRemote: {
+      en: "<strong>Remote support covers the whole country.</strong> If the job can be done over the internet, where you live makes no difference. <a href=\"priser.html\">See what it costs</a>.",
+      da: "<strong>Fjernsupport g\u00e6lder hele landet.</strong> Kan opgaven klares over nettet, betyder det ikke noget, hvor du bor. <a href=\"priser.html\">Se hvad det koster</a>."
+    },
+
     navPrices: { en: "Prices", da: "Priser" },
     navHours: { en: "Opening hours", da: "\u00c5bningstider" },
     footerTerms: { en: "Terms", da: "Handelsbetingelser" },
