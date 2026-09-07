@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,16 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title data-i18n="pageTitle">Sonderbek IT — Home Computer Repair You Can Trust</title>
 <meta name="description" content="Sonderbek IT fixes hardware and software problems on your stationary home computer — fast, honest, and secure. Book a free diagnosis today." data-i18n-attr="content:metaDescription">
+<link rel="canonical" href="https://mzdad.github.io/bytecare-homepage/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sonderbek IT">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="Sonderbek IT — computerhjælp i Hasselager og Aarhus Syd">
+<meta property="og:description" content="Hardware- og softwareproblemer løst på din computer. Fast pris før arbejdet går i gang. Åbent 09-23 på hverdage.">
+<meta property="og:url" content="https://mzdad.github.io/bytecare-homepage/">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="css/styles.css">
-<link rel="icon" href="data:,">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='16' fill='white'%3ES%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
@@ -27,6 +35,8 @@
     <nav class="main-nav" aria-label="Primary">
       <ul class="nav-list" id="navList">
         <li><a href="#services" data-i18n="navServices">Services</a></li>
+        <li><a href="priser.html" data-i18n="navPrices">Priser</a></li>
+        <li><a href="aabningstider.html" data-i18n="navHours">Åbningstider</a></li>
         <li><a href="#why-us" data-i18n="navWhyUs">Why Us</a></li>
         <li><a href="#process" data-i18n="navProcess">How It Works</a></li>
         <li><a href="#contact" data-i18n="navContact">Contact</a></li>
@@ -72,7 +82,8 @@
           aren't ours to see.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary btn-lg" data-i18n="heroCtaPrimary">Get a Free Diagnosis</a>
+          <a href="#contact" class="btn btn-primary btn-lg" data-i18n="heroCtaPrimary">Beskriv dit problem</a>
+          <a href="priser.html" class="btn btn-ghost btn-lg" data-i18n="heroCtaPrices">Se priser</a>
         </div>
         <ul class="hero-trust">
           <li data-i18n="trustPricing">Upfront pricing</li>
@@ -164,7 +175,7 @@
         </li>
         <li>
           <span class="step-num">2</span>
-          <h3 data-i18n="step2Title">Free diagnosis</h3>
+          <h3 data-i18n="step2Title">Fast pris</h3>
           <p data-i18n="step2Desc">Drop it off with us, or book a home visit — either way, we'll quote a fair, flat price.</p>
         </li>
         <li>
@@ -235,11 +246,41 @@
   <div class="container footer-inner">
     <p>&copy; <span id="year"></span> <span data-i18n="footerText">Sonderbek IT. All rights reserved.</span></p>
     <nav aria-label="Footer">
+      <a href="betingelser.html" data-i18n="footerTerms">Handelsbetingelser</a>
+      <a href="privatliv.html" data-i18n="footerPrivacy">Privatlivspolitik</a>
       <a href="#top" data-i18n="footerBackToTop">Back to top</a>
     </nav>
   </div>
 </footer>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Sonderbek IT",
+  "description": "Reparation af stationære og bærbare computere for private i Hasselager og Aarhus Syd.",
+  "url": "https://mzdad.github.io/bytecare-homepage/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hasselager",
+    "postalCode": "8361",
+    "addressCountry": "DK"
+  },
+  "areaServed": [
+    "Hasselager", "Kolt", "Viby J", "Tranbjerg", "Højbjerg", "Åbyhøj",
+    "Aarhus", "Solbjerg", "Mårslet", "Beder", "Malling", "Hørning",
+    "Stilling", "Skanderborg", "Odder"
+  ],
+  "priceRange": "562-700 DKK/t",
+  "currenciesAccepted": "DKK",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "09:00",
+    "closes": "23:00"
+  }]
+}
+</script>
 <script src="js/script.js"></script>
 </body>
 </html>

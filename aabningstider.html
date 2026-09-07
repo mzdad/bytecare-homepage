@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; base-uri 'none'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Åbningstider — Sonderbek IT</title>
+<meta name="description" content="Åbent 09-23 mandag til fredag og 12-19 i weekenden i lige uger. Computerhjælp i Hasselager, Viby, Tranbjerg og resten af Aarhus Syd.">
+<link rel="canonical" href="https://mzdad.github.io/bytecare-homepage/aabningstider.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sonderbek IT">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="Åbningstider — Sonderbek IT">
+<meta property="og:description" content="Åbent 09-23 mandag til fredag og 12-19 i weekenden i lige uger. Computerhjælp i Hasselager, Viby, Tranbjerg og resten af Aarhus Syd.">
+<meta property="og:url" content="https://mzdad.github.io/bytecare-homepage/aabningstider.html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='16' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skipLink">Gå til hovedindhold</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Sonderbek IT forside" data-i18n-attr="aria-label:logoAria">
+      <svg class="logo-mark" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="28" rx="8" fill="var(--brand)"/>
+        <text x="16" y="21.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="15" fill="#fff">S</text>
+      </svg>
+      <span>Sonderbek IT</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html#services" data-i18n="navServices">Ydelser</a></li>
+        <li><a href="priser.html" data-i18n="navPrices">Priser</a></li>
+        <li><a href="aabningstider.html" data-i18n="navHours">Åbningstider</a></li>
+        <li><a href="index.html#process" data-i18n="navProcess">Sådan foregår det</a></li>
+        <li><a href="index.html#contact" data-i18n="navContact">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-controls">
+      <div class="lang-toggle" role="group" aria-label="Language / Sprog">
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn active" data-lang="da" aria-pressed="true">DA</button>
+      </div>
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Skift til mørk tilstand">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path fill="currentColor" d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a.6.6 0 0 0-.7-.8A9.5 9.5 0 1 0 21.3 15.3a.6.6 0 0 0-.8-.7Z"/>
+        </svg>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary header-cta" data-i18n="headerCta">Book en reparation</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+      <span class="sr-only" data-i18n="menuSr">Menu</span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+      <span class="nav-toggle-bar" aria-hidden="true"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="info-main">
+  <div class="container info-container">
+    <p class="info-eyebrow" data-i18n="hoursEyebrow">Åbningstider</p>
+    <h1 data-i18n="hoursTitle">Hvornår kan du fange mig?</h1>
+    <p class="info-lead" data-i18n="hoursLead">Jeg har åbent sent på hverdage, så du kan nå det efter arbejde. Formularen er åben døgnet rundt — jeg svarer som regel inden for en dag.</p>
+
+    <p class="open-now" id="openNow">Tjekker…</p>
+
+    <div class="table-scroll">
+      <table class="info-table hours-table">
+        <tbody>
+          <tr><th data-i18n="hoursWeekdays">Mandag – fredag</th><td>09.00 – 23.00</td></tr>
+          <tr><th data-i18n-html="hoursEvenWeekend">Lørdag – søndag i <em>lige</em> uger</th><td>12.00 – 19.00</td></tr>
+          <tr><th data-i18n="hoursOddWeekend">Lørdag – søndag i ulige uger</th><td data-i18n="hoursClosed">Lukket</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="info-fineprint"><span data-i18n="hoursWeekNote">Lige uger vil sige uge 2, 4, 6 og så videre. Denne uge er uge</span> <strong id="weekNumber">–</strong><span data-i18n="hoursWeekNoteEnd">.</span></p>
+
+    <h2 data-i18n="areasTitle">Hvor jeg kommer</h2>
+    <p data-i18n="areasLead">Du kan aflevere maskinen i Hasselager, eller jeg kan komme ud til dig efter aftale. Jeg dækker Hasselager og området omkring:</p>
+    <ul class="area-list">
+      <li>Hasselager</li><li>Kolt</li><li>Viby J</li><li>Tranbjerg</li>
+      <li>Højbjerg</li><li>Åbyhøj</li><li>Aarhus S</li><li>Aarhus C</li>
+      <li>Solbjerg</li><li>Mårslet</li><li>Beder</li><li>Malling</li>
+      <li>Hørning</li><li>Stilling</li><li>Skanderborg</li><li>Odder</li>
+    </ul>
+    <p data-i18n="areasMore">Bor du lige uden for listen, så spørg alligevel. Det er som regel til at løse.</p>
+
+    <h2 data-i18n="outsideTitle">Uden for åbningstiden</h2>
+    <p data-i18n="outsideBody">Skriv via kontaktformularen når som helst. Den lander direkte i mit system, og du får svar, så snart jeg åbner igen. Haster det med en maskine, der ikke må stå stille, så skriv det i beskeden.</p>
+
+    <div class="info-cta">
+      <a href="index.html#contact" class="btn btn-primary btn-lg" data-i18n="hoursCta">Skriv til mig</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> <span data-i18n="footerText">Sonderbek IT. Alle rettigheder forbeholdes.</span></p>
+    <nav aria-label="Footer">
+      <a href="betingelser.html" data-i18n="footerTerms">Handelsbetingelser</a>
+      <a href="privatliv.html" data-i18n="footerPrivacy">Privatlivspolitik</a>
+      <a href="index.html#top" data-i18n="footerBackToTop">Til forsiden</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

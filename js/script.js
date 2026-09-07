@@ -9,6 +9,107 @@
     menuSr: { en: "Menu", da: "Menu" },
     logoAria: { en: "Sonderbek IT home", da: "Sonderbek IT forside" },
 
+    navPrices: { en: "Prices", da: "Priser" },
+    navHours: { en: "Opening hours", da: "\u00c5bningstider" },
+    footerTerms: { en: "Terms", da: "Handelsbetingelser" },
+    footerPrivacy: { en: "Privacy", da: "Privatlivspolitik" },
+    heroCtaPrices: { en: "See prices", da: "Se priser" },
+
+    pricesEyebrow: { en: "Prices", da: "Priser" },
+    pricesTitle: { en: "What does it cost?", da: "Hvad koster det?" },
+    pricesLead: {
+      en: "You always get a fixed price before I start. No hidden fees, and no hours you did not agree to.",
+      da: "Du f\u00e5r altid en fast pris, f\u00f8r jeg g\u00e5r i gang. Ingen skjulte gebyrer, og ingen timer du ikke har sagt ja til."
+    },
+    pricesRateLabel: { en: "At the workshop", da: "P\u00e5 v\u00e6rkstedet" },
+    pricesRateNote: { en: "per hour, incl. VAT", da: "pr. time, inkl. moms" },
+    pricesVisitLabel: { en: "At your home", da: "Hjemme hos dig" },
+    pricesVisitNote: {
+      en: "first hour, then 600 kr per hour",
+      da: "f\u00f8rste time, derefter 600 kr pr. time"
+    },
+    pricesTypicalTitle: { en: "What the usual jobs tend to cost", da: "Hvad de almindelige opgaver plejer at koste" },
+    pricesTypicalLead: {
+      en: "Indicative. The price depends on the machine, and you get a fixed price for yours before anything is touched.",
+      da: "Vejledende. Prisen afh\u00e6nger af maskinen, og du f\u00e5r en fast pris p\u00e5 netop din, f\u00f8r der bliver r\u00f8rt ved noget."
+    },
+    pricesColJob: { en: "Job", da: "Opgave" },
+    pricesColTime: { en: "Typical time", da: "Typisk tid" },
+    pricesColPrice: { en: "Indicative price", da: "Vejledende pris" },
+    jobVirus: { en: "Viruses and unwanted programs removed", da: "Virus og u\u00f8nskede programmer fjernes" },
+    jobSlow: { en: "The computer has become slow", da: "Computeren er blevet langsom" },
+    jobWindows: { en: "Windows set up from scratch", da: "Windows s\u00e6ttes op forfra" },
+    jobSsd: { en: "New SSD fitted, everything moved across", da: "Ny SSD s\u00e6ttes i, og alt flyttes med" },
+    jobData: { en: "Data rescued from a failing drive", da: "Data reddes fra en disk p\u00e5 vej ud" },
+    jobPrinter: { en: "Printer or network set up again", da: "Printer eller netv\u00e6rk sat op igen" },
+    jobMail: { en: "Mail and passwords not working", da: "Mail og adgangskoder virker ikke" },
+    jobTest: { en: "Overnight memory or power testing", da: "Test natten over af hukommelse eller str\u00f8m" },
+    jobTestTime: { en: "overnight", da: "natten over" },
+    plusPart: { en: "+ the drive", da: "+ disken" },
+    pricesPartsTitle: { en: "Parts", da: "Reservedele" },
+    pricesPartsBody: {
+      en: "Parts come on top of the labour. You are told the price before I order anything \u2014 and you decide whether it is worth it. I do not add hidden fees.",
+      da: "Dele kommer oven i arbejdet. Du f\u00e5r prisen at vide, f\u00f8r jeg bestiller noget \u2014 og du bestemmer, om det er pengene v\u00e6rd. Jeg l\u00e6gger ikke skjulte gebyrer oveni."
+    },
+    pricesVisitTitle: { en: "Home visits", da: "Hjemmebes\u00f8g" },
+    pricesVisitBody: {
+      en: "If the machine should not be moved, or it is simply easiest for you, I come to you. <strong>700 kr for the first hour and 600 kr for each hour after that</strong>, incl. VAT and travel within the service area. There is no separate call-out fee \u2014 the first hour covers the journey.",
+      da: "Skal maskinen ikke flyttes, eller er det bare nemmest for dig, kommer jeg ud. <strong>700 kr for den f\u00f8rste time og 600 kr for hver time derefter</strong>, inkl. moms og k\u00f8rsel inden for serviceomr\u00e5det. Der er ingen s\u00e6rskilt udkaldsgebyr \u2014 den f\u00f8rste time d\u00e6kker turen."
+    },
+    pricesVisitTip: {
+      en: "If it is a desktop and not urgent, dropping it off is usually cheaper. Then you pay the workshop rate.",
+      da: "Er det en station\u00e6r maskine, og haster det ikke, bliver det som regel billigst at aflevere den. S\u00e5 betaler du v\u00e6rkstedsprisen."
+    },
+    pricesDiagTitle: { en: "Fault-finding", da: "Fejlfinding" },
+    pricesDiagBody: {
+      en: "Fault-finding is part of the work and is charged at the hourly rate. In return I do not guess: you are told what I think it is, what it costs to confirm, and what the repair would then come to \u2014 <strong>before I start</strong>. You say yes or no knowing where you stand.",
+      da: "Fejlfinding er en del af arbejdet og afregnes efter timeprisen. Til geng\u00e6ld g\u00e6tter jeg ikke: du f\u00e5r at vide, hvad jeg tror det er, hvad det vil koste at f\u00e5 bekr\u00e6ftet, og hvad reparationen s\u00e5 lander p\u00e5 \u2014 <strong>f\u00f8r jeg g\u00e5r i gang</strong>. Du siger ja eller nej p\u00e5 et oplyst grundlag."
+    },
+    pricesFairTitle: { en: "How you avoid surprises", da: "S\u00e5dan undg\u00e5r du overraskelser" },
+    fairQuote: { en: "You get a fixed price before the work starts.", da: "Du f\u00e5r en fast pris, f\u00f8r arbejdet g\u00e5r i gang." },
+    fairGrow: {
+      en: "If the job grows beyond what we agreed, I stop and ask first. You never pay for hours you did not agree to.",
+      da: "Vokser opgaven ud over det aftalte, stopper jeg og sp\u00f8rger f\u00f8rst. Du betaler aldrig for timer, du ikke har sagt ja til."
+    },
+    fairParts: { en: "Parts are never ordered before you know the price.", da: "Dele bliver aldrig bestilt, f\u00f8r du kender prisen." },
+    fairGuarantee: { en: "There is a 3 month guarantee on the work.", da: "Der er 3 m\u00e5neders garanti p\u00e5 arbejdet." },
+    pricesMoms: { en: "All prices include 25% Danish VAT and apply to private customers.", da: "Alle priser er inkl. 25% moms og g\u00e6lder private kunder." },
+    pricesCta: { en: "Describe your problem \u2014 get a price", da: "Beskriv dit problem \u2014 f\u00e5 en pris" },
+
+    hoursEyebrow: { en: "Opening hours", da: "\u00c5bningstider" },
+    hoursTitle: { en: "When can you catch me?", da: "Hvorn\u00e5r kan du fange mig?" },
+    hoursLead: {
+      en: "I am open late on weekdays so you can make it after work. The form is open around the clock \u2014 I usually reply within a day.",
+      da: "Jeg har \u00e5bent sent p\u00e5 hverdage, s\u00e5 du kan n\u00e5 det efter arbejde. Formularen er \u00e5ben d\u00f8gnet rundt \u2014 jeg svarer som regel inden for en dag."
+    },
+    hoursChecking: { en: "Checking\u2026", da: "Tjekker\u2026" },
+    hoursWeekdays: { en: "Monday \u2013 Friday", da: "Mandag \u2013 fredag" },
+    hoursEvenWeekend: { en: "Saturday \u2013 Sunday in <em>even</em> weeks", da: "L\u00f8rdag \u2013 s\u00f8ndag i <em>lige</em> uger" },
+    hoursOddWeekend: { en: "Saturday \u2013 Sunday in odd weeks", da: "L\u00f8rdag \u2013 s\u00f8ndag i ulige uger" },
+    hoursClosed: { en: "Closed", da: "Lukket" },
+    hoursWeekNote: { en: "Even weeks means week 2, 4, 6 and so on. This week is week", da: "Lige uger vil sige uge 2, 4, 6 og s\u00e5 videre. Denne uge er uge" },
+    hoursWeekNoteEnd: { en: ".", da: "." },
+    hoursOpenNow: { en: "Open now \u2014 until", da: "\u00c5bent nu \u2014 til" },
+    hoursClosedNow: { en: "Closed now", da: "Lukket nu" },
+    hoursOpensAt: { en: "opens at", da: "\u00e5bner kl." },
+    hoursOpensMonday: { en: "opens Monday at 09.00", da: "\u00e5bner mandag kl. 09.00" },
+    areasTitle: { en: "Where I come out to", da: "Hvor jeg kommer" },
+    areasLead: {
+      en: "You can drop the machine off in Hasselager, or I can come to you by appointment. I cover Hasselager and the area around it:",
+      da: "Du kan aflevere maskinen i Hasselager, eller jeg kan komme ud til dig efter aftale. Jeg d\u00e6kker Hasselager og omr\u00e5det omkring:"
+    },
+    areasMore: {
+      en: "If you live just outside the list, ask anyway. It is usually workable.",
+      da: "Bor du lige uden for listen, s\u00e5 sp\u00f8rg alligevel. Det er som regel til at l\u00f8se."
+    },
+    outsideTitle: { en: "Outside opening hours", da: "Uden for \u00e5bningstiden" },
+    outsideBody: {
+      en: "Write through the contact form whenever you like. It lands straight in my system and you get an answer as soon as I open again. If it is urgent, say so in the message.",
+      da: "Skriv via kontaktformularen n\u00e5r som helst. Den lander direkte i mit system, og du f\u00e5r svar, s\u00e5 snart jeg \u00e5bner igen. Haster det med en maskine, der ikke m\u00e5 st\u00e5 stille, s\u00e5 skriv det i beskeden."
+    },
+    hoursCta: { en: "Write to me", da: "Skriv til mig" },
+    hoursTomorrowish: { en: "next opening day", da: "næste åbningsdag" },
+
     navServices: { en: "Services", da: "Ydelser" },
     navWhyUs: { en: "Why Us", da: "Hvorfor os" },
     navProcess: { en: "How It Works", da: "Sådan foregår det" },
@@ -21,7 +122,7 @@
       en: "Sonderbek IT helps private individuals solve hardware and software problems on their stationary computer. Drop it off at our address, or we'll come to you by appointment. No jargon, no hidden fees, no snooping through files that aren't ours to see.",
       da: "Sonderbek IT hjælper private med at løse hardware- og softwareproblemer på deres stationære computer. Aflever den hos os, eller vi kommer ud efter aftale. Ingen fagsprog, ingen skjulte gebyrer, og vi roder ikke i filer, der ikke er vores at se."
     },
-    heroCtaPrimary: { en: "Get a Free Diagnosis", da: "Få en gratis diagnose" },
+    heroCtaPrimary: { en: "Describe your problem", da: "Beskriv dit problem" },
 
     trustPricing: { en: "Upfront pricing", da: "Fast pris på forhånd" },
     trustPrivacy: { en: "Privacy-first repairs", da: "Diskretion i højsædet" },
@@ -67,8 +168,8 @@
 
     processTitle: { en: "How it works", da: "Sådan foregår det" },
     step1Title: { en: "Reach out", da: "Kontakt os" },
-    step1Desc: { en: "Tell us what's wrong using the form below, or call us directly.", da: "Fortæl os, hvad der er galt, via formularen herunder, eller ring til os direkte." },
-    step2Title: { en: "Free diagnosis", da: "Gratis diagnose" },
+    step1Desc: { en: "Tell us what's wrong using the form below — the more detail, the better the estimate.", da: "Fortæl via formularen herunder, hvad der er galt — jo mere du skriver, jo bedre et prisoverslag kan jeg give." },
+    step2Title: { en: "A fixed price", da: "Fast pris" },
     step2Desc: { en: "Drop it off with us, or book a home visit — either way, we'll quote a fair, flat price.", da: "Aflever den hos os, eller book et hjemmebesøg — under alle omstændigheder får du en fast, fair pris." },
     step3Title: { en: "We fix it", da: "Vi ordner den" },
     step3Desc: { en: "You approve the price, we do the work, and we test everything before handing it back.", da: "Du godkender prisen, vi udfører arbejdet, og vi tester alt, inden du får den tilbage." },
@@ -96,8 +197,8 @@
 
     pageTitle: { en: "Sonderbek IT — Home Computer Repair You Can Trust", da: "Sonderbek IT — Computerreparation, du kan stole på" },
     metaDescription: {
-      en: "Sonderbek IT fixes hardware and software problems on your stationary home computer — fast, honest, and secure. Book a free diagnosis today.",
-      da: "Sonderbek IT løser hardware- og softwareproblemer på din stationære hjemmecomputer — hurtigt, ærligt og sikkert. Book en gratis diagnose i dag."
+      en: "Sonderbek IT fixes hardware and software problems on your home computer — fast, honest, and secure. Fixed price before the work starts. Open 09-23 on weekdays.",
+      da: "Sonderbek IT løser hardware- og softwareproblemer på din computer — hurtigt, ærligt og sikkert. Fast pris, før arbejdet går i gang. Åbent 09-23 på hverdage."
     },
 
     errRequired: { en: "Please fill in your name and describe the issue.", da: "Udfyld venligst dit navn og beskriv problemet." },
@@ -122,7 +223,7 @@
     copyFailed: { en: "Couldn't copy — please select the text above and copy it manually.", da: "Kunne ikke kopiere — markér teksten ovenfor, og kopiér den manuelt." }
   };
 
-  var currentLang = "en";
+  var currentLang = "da";
   try {
     var storedLang = localStorage.getItem(LANG_KEY);
     if (storedLang === "da" || storedLang === "en") currentLang = storedLang;
@@ -192,6 +293,9 @@
     });
 
     updateThemeButton();
+    // The opening-hours badge is built from the clock rather than from a
+    // dictionary key, so it has to be redrawn by hand after a language change.
+    if (typeof renderOpeningState === "function") renderOpeningState();
     try { localStorage.setItem(LANG_KEY, currentLang); } catch (e) {}
   }
 
@@ -215,6 +319,68 @@
       if (history.pushState) history.pushState(null, "", "#" + id);
     });
   });
+
+  // ---- Opening hours ------------------------------------------------------
+  // 09-23 Monday to Friday, and 12-19 at weekends in EVEN ISO weeks.
+  //
+  // Published hours that are wrong are worse than no hours at all - somebody
+  // drives to Hasselager on a closed Saturday - so the badge is computed from
+  // the same two rules the table states, rather than kept in step by hand.
+
+  function isoWeek(d) {
+    // ISO-8601: the week containing the Thursday. Sunday belongs to the week
+    // that started on the preceding Monday, which is what makes a whole
+    // weekend fall inside one week number.
+    var t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    var dayNum = t.getUTCDay() || 7;
+    t.setUTCDate(t.getUTCDate() + 4 - dayNum);
+    var yearStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+    return Math.ceil((((t - yearStart) / 86400000) + 1) / 7);
+  }
+
+  function openingState(now) {
+    var day = now.getDay();                                  // 0 Sun .. 6 Sat
+    var mins = now.getHours() * 60 + now.getMinutes();
+    if (day >= 1 && day <= 5) {
+      return { open: mins >= 540 && mins < 1380, opens: "09.00", closes: "23.00",
+               early: mins < 540 };
+    }
+    if (isoWeek(now) % 2 === 0) {
+      return { open: mins >= 720 && mins < 1140, opens: "12.00", closes: "19.00",
+               early: mins < 720 };
+    }
+    return { open: false, closedAllDay: true };
+  }
+
+  var openNowEl = document.getElementById("openNow");
+  var weekNumberEl = document.getElementById("weekNumber");
+
+  function renderOpeningState() {
+    var now = new Date();
+    if (weekNumberEl) weekNumberEl.textContent = String(isoWeek(now));
+    if (!openNowEl) return;
+    var s = openingState(now);
+    if (s.open) {
+      openNowEl.textContent = t("hoursOpenNow") + " " + s.closes;
+      openNowEl.setAttribute("data-state", "open");
+    } else if (s.closedAllDay) {
+      openNowEl.textContent = t("hoursClosedNow") + " \u2014 " + t("hoursOpensMonday");
+      openNowEl.setAttribute("data-state", "closed");
+    } else if (s.early) {
+      openNowEl.textContent = t("hoursClosedNow") + " \u2014 " + t("hoursOpensAt") + " " + s.opens;
+      openNowEl.setAttribute("data-state", "closed");
+    } else {
+      openNowEl.textContent = t("hoursClosedNow") + " \u2014 " + t("hoursOpensAt") + " "
+        + s.opens + " (" + t("hoursTomorrowish") + ")";
+      openNowEl.setAttribute("data-state", "closed");
+    }
+  }
+
+  if (openNowEl || weekNumberEl) {
+    renderOpeningState();
+    // Cheap insurance against a tab left open across an opening or closing time.
+    setInterval(renderOpeningState, 60000);
+  }
 
   // Mobile nav toggle
   var navToggle = document.getElementById("navToggle");

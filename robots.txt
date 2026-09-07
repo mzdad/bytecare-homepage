@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://mzdad.github.io/bytecare-homepage/sitemap.xml
